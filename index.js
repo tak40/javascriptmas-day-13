@@ -14,17 +14,17 @@
  * - Add more dietary options.
  * - Show recipes when the meal has been selected.
  *
- * @format
+ * 
  */
 
-// Cache DOM elements
+
 const btn = document.getElementById('btn')
 const numInput = document.getElementById('num-input')
 const vegetarianInput = document.getElementById('vegetarian-input')
 const foodDisplay = document.getElementById('food')
 
 btn.addEventListener('click', () => {
-    const numGuests = +numInput.value // Unary plus for number conversion
+    const numGuests = +numInput.value
     const isVegetarian = vegetarianInput.checked
 
     if (isNaN(numGuests) || numGuests <= 0) {
@@ -32,7 +32,6 @@ btn.addEventListener('click', () => {
         return
     }
 
-    // Ternary operator for conditional assignment
     const dinnerSuggestion = isVegetarian
         ? 'Winter Squash Risotto'
         : numGuests <= 4
